@@ -14,7 +14,7 @@ from .distributed import synchronize, is_main_process, all_gather_container
 
 # FIXME experimenting with speedups for OpenImages eval, it's slow
 #import pyximport; py_importer, pyx_importer = pyximport.install(pyimport=True)
-import effdet.evaluation.detection_evaluator as tfm_eval
+from .evaluation import detection_evaluator as tfm_eval
 #pyximport.uninstall(py_importer, pyx_importer)
 
 _logger = logging.getLogger(__name__)

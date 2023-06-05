@@ -31,7 +31,7 @@ import torch
 import torch.nn as nn
 from torchvision.ops.boxes import batched_nms, remove_small_boxes
 
-from effdet.object_detection import ArgMaxMatcher, FasterRcnnBoxCoder, BoxList, IouSimilarity, TargetAssigner
+from .object_detection import ArgMaxMatcher, FasterRcnnBoxCoder, BoxList, IouSimilarity, TargetAssigner
 from .soft_nms import batched_soft_nms
 
 

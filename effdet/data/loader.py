@@ -5,7 +5,7 @@ Hacked together by / Copyright 2020 Ross Wightman
 import torch.utils.data
 from .transforms import *
 from .random_erasing import RandomErasing
-from effdet.anchors import AnchorLabeler
+from ..anchors import AnchorLabeler
 from timm.data.distributed_sampler import OrderedDistributedSampler
 import os
 

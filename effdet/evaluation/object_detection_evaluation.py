@@ -2,8 +2,8 @@ import logging
 
 import numpy as np
 
-from effdet.evaluation.metrics import compute_precision_recall, compute_average_precision, compute_cor_loc
-from effdet.evaluation.per_image_evaluation import PerImageEvaluation
+from .metrics import compute_precision_recall, compute_average_precision, compute_cor_loc
+from .per_image_evaluation import PerImageEvaluation
 
 
 class ObjectDetectionEvaluation:
