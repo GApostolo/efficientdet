@@ -33,7 +33,17 @@ try:
 except AttributeError:
     pass
 
-torch.backends.cudnn.benchmark = True
+saved_state = None
+
+
+def setup_before_inference():
+    global saved_state
+    saved_state = torch.backends.cudnn.benchmark
+    torch.backends.cudnn.benchmark = True
+
+
+def restore_after_inference():
+    torch.backends.cudnn.benchmark = saved_state
 
 
 def load_model(amp: bool = False, native_amp: bool = False, apex_amp: bool = False, pretrained: bool = False,
